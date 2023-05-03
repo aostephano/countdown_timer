@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/EventProvider.dart';
 
 //Date and time by Mutafa Tahir on: https://medium.com/@mustafatahirhussein/datepicker-timepicker-a-flutter-guide-e9c06f879279
 
@@ -76,9 +79,14 @@ class _InsertDateTimeState extends State<InsertDateTime> {
     );
 
     if (date != null) {
+      //PROVIDER
       setState(() {
         _dateC.text = date.toLocal().toString().split(" ")[0];
       });
+
+      //Add DateTime to Provider Aux Var
+      var eventState = context.watch<EventProvider>();
+      eventState.currentDateTime = date;
     }
   }
 
@@ -87,9 +95,14 @@ class _InsertDateTimeState extends State<InsertDateTime> {
         await showTimePicker(context: context, initialTime: selectedTime);
 
     if (time != null) {
+      //PROVIDER
       setState(() {
         _timeC.text = "${time.hour}:${time.minute}";
       });
+
+      //Add Time to Provider Aux Var
+      var eventState = context.watch<EventProvider>();
+      eventState.currentEventTime = time;
     }
   }
 }

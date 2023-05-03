@@ -2,6 +2,8 @@ import 'package:countdown_timer/widgets/InsertName.dart';
 import 'package:countdown_timer/widgets/InsertDateTime.dart';
 import 'package:flutter/material.dart';
 
+import 'CreateEventButton.dart';
+
 class DisplayInputs extends StatefulWidget {
   const DisplayInputs({Key? key}) : super(key: key);
 
@@ -15,7 +17,14 @@ class _DisplayInputsState extends State<DisplayInputs> {
     return Column(
       children: [
         InsertName(),
+        SizedBox(
+          height: 30,
+        ),
         InsertDateTime(),
+        SizedBox(
+          height: 30,
+        ),
+        CreateEventButton(),
       ],
     );
   }

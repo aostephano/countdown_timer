@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/EventProvider.dart';
 
 class InsertName extends StatefulWidget {
   const InsertName({Key? key}) : super(key: key);
@@ -32,6 +35,14 @@ class _InsertNameState extends State<InsertName> {
   Widget build(BuildContext context) {
     return Column(children: [
       TextFormField(
+        //PROVIDER
+        onChanged: (String fieldContent) {
+          eventName = fieldContent;
+
+          //Add Time to Provider Aux Var
+          var eventState = Provider.of<EventProvider>(context, listen: false);
+          eventState.currentEventName = eventName;
+        },
         controller: _textFieldController,
         decoration: const InputDecoration(
           border: UnderlineInputBorder(),
@@ -39,7 +50,7 @@ class _InsertNameState extends State<InsertName> {
         ),
       ),
       const SizedBox(
-        height: 10,
+        height: 20,
       ),
     ]);
   }

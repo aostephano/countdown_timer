@@ -1,5 +1,5 @@
 import 'package:countdown_timer/pages/MyHomePage.dart';
-import 'package:countdown_timer/providers/MyProvider.dart';
+import 'package:countdown_timer/providers/EventProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => MyProvider(),
+          create: (context) => EventProvider(),
         ),
       ],
       child: MaterialApp(

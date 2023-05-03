@@ -27,4 +27,9 @@ class EventModel {
   set eventDateTime(DateTime value) {
     _eventDateTime = value;
   }
+
+  @override
+  String toString() {
+    return 'Evento{Nome:${eventName}, DateTime:${eventDateTime}, TimeOfDay:${eventTime}}';
+  }
 }
