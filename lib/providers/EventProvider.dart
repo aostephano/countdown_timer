@@ -7,7 +7,7 @@ class EventProvider extends ChangeNotifier {
   //Aux vars
   String currentEventName = '';
   DateTime currentDateTime = DateTime.now();
-  TimeOfDay currentEventTime = TimeOfDay.now();
+  TimeOfDay currentEventTime = TimeOfDay(hour: 00, minute: 00);
 
   addEvent(String eventName, DateTime dateTime, TimeOfDay eventTime) {
     //auxInstance
