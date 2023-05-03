@@ -1,17 +1,17 @@
-# ProjectName
+# Countdown Timer
 
 <img src="img.url" alt="exemplo imagem" width="40%">
 
 
 > Flutter App using Provider AppState Pattern
 
-> Project Easy2Read Description
+> The objective of Countdown Timer is to provide a continuously decrementing display of the he months, days, hours, minutes, and seconds to a user entered event.
 
-###### Project idea 00 from [App Ideas Collection](https://github.com/florinpop17/app-ideas)
+###### Project idea 03 from [App Ideas Collection](https://github.com/florinpop17/app-ideas)
 
-## 🚀 Installing <ProjectName>
+## 🚀 Installing <Countdown Timer>
 
-To install ProjectName, follow these steps:
+To install Countdown Timer, follow these steps:
 
 Inside the folder, type:
 
@@ -27,9 +27,9 @@ Windows:
 flutter run
 ```
 
-## ☕ Using <Bin2Dec>
+## ☕ Using Countdown Timer
 
-To use <ProjectName>, follow these steps:
+To use Countdown Timer, follow these steps:
 
 ```
 Type
