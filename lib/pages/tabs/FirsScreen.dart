@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../widgets/DisplayCountdown.dart';
 import '../../widgets/DisplayInputs.dart';
 
 class FirstScreen extends StatefulWidget {
@@ -19,8 +20,10 @@ class _FirstScreenState extends State<FirstScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           DisplayInputs(),
-          Text("TimerDisplay"),
-          Text("Add timer to Memory"),
+          SizedBox(
+            height: 10,
+          ),
+          DisplayCountdown(),
         ],
       ),
     );

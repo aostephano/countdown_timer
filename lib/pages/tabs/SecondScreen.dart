@@ -22,27 +22,19 @@ class _SecondScreenState extends State<SecondScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          for (var event in eventList)
-            ListTile(
-              leading: Icon(Icons.favorite),
-              title: Text(event.eventName),
-              subtitle: Text(
-                  event.eventDateTime.toString() + event.eventTime.toString()),
-            )
-          // eventList.isNotEmpty
-          //     ? ListView.builder(
-          //         itemCount: eventList.length,
-          //         itemBuilder: (BuildContext context, int index) {
-          //           var event = eventList[index];
-          //           return ListTile(
-          //             title: Text(event.eventName.toString()),
-          //             subtitle: Text(
-          //                 "${event.eventDateTime.toString()} • ${event.eventTime.toString()}"),
-          //             onTap: () {},
-          //           );
-          //         },
-          //       )
-          //     : const Text("No events yet :("),
+          eventList.isEmpty
+              ? Text("No events yet :(")
+              : Column(
+                  children: [
+                    for (var event in eventList)
+                      ListTile(
+                        leading: Icon(Icons.timelapse_rounded),
+                        title: Text(event.eventName),
+                        subtitle: Text(
+                            "DateTime: ${event.eventDateTime} Time: ${event.eventTime}"),
+                      )
+                  ],
+                ),
         ],
       ),
     );
