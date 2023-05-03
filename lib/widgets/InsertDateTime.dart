@@ -98,11 +98,13 @@ class _InsertDateTimeState extends State<InsertDateTime> {
       //PROVIDER
       setState(() {
         _timeC.text = "${time.hour}:${time.minute}";
+        debugPrint("Imhere");
       });
 
       //Add Time to Provider Aux Var
       var eventState = context.watch<EventProvider>();
-      eventState.currentEventTime = time;
+      TimeOfDay currentTime = TimeOfDay(hour: time.hour, minute: time.minute);
+      eventState.currentEventTime = currentTime;
     }
   }
 }

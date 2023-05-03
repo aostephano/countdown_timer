@@ -28,8 +28,8 @@ class EventModel {
     _eventDateTime = value;
   }
 
-  @override
-  String toString() {
-    return 'Evento{Nome:${eventName}, DateTime:${eventDateTime}, TimeOfDay:${eventTime}}';
-  }
+  // @override
+  // String toString() {
+  //   return 'Evento{Nome:${eventName}, DateTime:${eventDateTime}, TimeOfDay:${eventTime}}';
+  // }
 }
