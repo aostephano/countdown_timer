@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../providers/EventProvider.dart';
 import '../../widgets/DisplayCountdown.dart';
 import '../../widgets/DisplayInputs.dart';
 
@@ -13,6 +15,10 @@ class FirstScreen extends StatefulWidget {
 class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
+    var eventState = context.watch<EventProvider>();
+    var eventList = eventState.eventList;
+    eventState.addListener(() {});
+
     return Container(
       padding: const EdgeInsets.all(20),
       child: Column(

@@ -21,9 +21,9 @@ class _CreateEventButtonState extends State<CreateEventButton> {
             String currentEventName = eventState.currentEventName;
             DateTime currentDateTime = eventState.currentDateTime;
             TimeOfDay currentEventTime = eventState.currentEventTime;
-            eventState.addEvent(
-                currentEventName, currentDateTime, currentEventTime);
-            eventState.startCountdown(currentDateTime, currentEventTime);
+            String currentCountdown = eventState.currentCountdown;
+            eventState.addEvent(currentEventName, currentDateTime,
+                currentEventTime, currentCountdown);
           },
           child: Text("Create Event"),
         ),

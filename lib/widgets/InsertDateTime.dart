@@ -83,9 +83,8 @@ class _InsertDateTimeState extends State<InsertDateTime> {
       setState(() {
         _dateC.text = date.toLocal().toString().split(" ")[0];
       });
-
       //Add DateTime to Provider Aux Var
-      var eventState = context.watch<EventProvider>();
+      var eventState = Provider.of<EventProvider>(context, listen: false);
       eventState.currentDateTime = date;
     }
   }

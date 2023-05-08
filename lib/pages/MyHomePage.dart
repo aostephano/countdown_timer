@@ -61,13 +61,13 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-            title: Text('FirstTab'),
+            title: Text('Create Countdown'),
             icon: Icon(Icons.home),
             activeColor: Colors.teal,
             inactiveColor: Colors.teal,
           ),
           BottomNavyBarItem(
-            title: Text('SecondTab'),
+            title: Text('History Countdown'),
             icon: Icon(Icons.access_alarm),
             activeColor: Colors.teal,
             inactiveColor: Colors.teal,

@@ -15,6 +15,7 @@ class _SecondScreenState extends State<SecondScreen> {
   Widget build(BuildContext context) {
     var eventState = context.watch<EventProvider>();
     var eventList = eventState.eventList;
+    eventState.updateUI();
 
     return Container(
       padding: const EdgeInsets.all(20),
@@ -31,7 +32,13 @@ class _SecondScreenState extends State<SecondScreen> {
                         leading: Icon(Icons.timelapse_rounded),
                         title: Text(event.eventName),
                         subtitle: Text(
-                            "DateTime: ${event.eventDateTime} Time: ${event.eventTime}"),
+                            "DateTime: ${event.eventDateTime} | Time: ${event.eventTime} | Countdown:${event.eventCountdown} "),
+                        trailing: IconButton(
+                          icon: Icon(Icons.delete),
+                          onPressed: () {
+                            eventState.removeEvent(event);
+                          },
+                        ),
                       )
                   ],
                 ),
